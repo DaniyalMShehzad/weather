@@ -1,10 +1,15 @@
 .navbar2 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    background-color: ghostwhite;
     border-bottom: 1px solid black;
+    background-color: #1f1f1f;
+    color: white;
+    height: 60px;
+    position: sticky;
+    z-index: 10000;
+    top: 0;
 }
 
 body {
@@ -14,10 +19,20 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-variant: tabular-nums;
     line-height: 1.5715;
-    background-color: ghostwhite;
+    background-color: #ebebeb !important;
     font-feature-settings: "tnum";
 }
-.Navbar {
+h3.NavCountryName {
+    color: white;
+    margin: 0;
+}
+p.weatherMainP {
+    margin: 0;
+    font-size: 16px;
+}
+h1.h1text {
+    margin: 0px;
+    color: white;
 }
 .navcountry {
     font-size: 22px;
@@ -25,17 +40,112 @@ body {
 .about {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .about2 {
-    width: 50%;
+    width:60%;
 }
 .about3 {
-    border: 2px outset;
-    background-color: ghostwhite;
+    border: 1px outset;
+    background-color: white;
     padding: 27px;
+    margin-bottom: 66px;
 }
 .card {
     display: flex;
     justify-content: space-between;
+}
+img.card2img {
+    width: 121px;
+}
+h4.aboutcardWeather {
+    font-size: 17px;
+    font-weight: 600;
+}
+.cardWeatherImage {
+    display: flex;
+    align-items: center;
+}
+p.tempP {
+    font-size: 48px;
+    margin: 0px;
+}
+p.RealFeelp {
+    margin: 0;
+    font-size: 15px;
+    color: #676767;
+}
+.divFeelsReal {
+    padding-left: 20px;
+}
+.card3 {
+    width: 40%;
+}
+.card2 {
+    width: 50%;
+}
+.cardWind {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+p.cardWindP {
+    margin: 0;
+    font-size: 20px;
+    color: #676767;
+}
+.cardSpeed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+p.cardSpeedP {
+    margin: 0;
+    font-size: 20px;
+    color: #676767;
+}
+h4.CardWindH4 {
+    font-size: 19px;
+    margin: 0;
+}
+.card4 {
+    width: 45%;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0; */
+}
+h4.Card4H4 {
+    font-size: 35px;
+    font-family: fantasy;
+    margin: 0;
+}
+.card7 ,.card6{
+    width: 45%;
+}
+@media screen and (max-width:768px) {
+    .card3,.card2,.card4,.card6,.card7,.card2 {
+        width: 100%;
+        margin-top: 35px;
+    }
+    .card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .cardWeatherImage {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar2 {
+        height: 100px;
+    }
 }

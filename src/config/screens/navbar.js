@@ -7,7 +7,7 @@ import 'antd/dist/antd.min.css';
 import About from './about';
 export default function Navbar() {
     const [dt,setDt]= useState()
-    const [country, setCountry] = useState()
+    const [country, setCountry] = useState("Afghanistan")
     const { Option } = Select;
     // const getData=(id)=>{
     //     const api =`https://api.openweathermap.org/data/2.5/weather?q=${id}&appid=70eefff73d1dfcf0e9ca4bfb45c3c9d2`
@@ -61,7 +61,7 @@ export default function Navbar() {
                     <h1 className="h1text">Weather</h1>
                 </div>
                 <div className="navcountry">
-                <h3>{country}</h3>
+                <h3 className="NavCountryName">{country}</h3>
                 </div>
                 <div>
                 </div>
@@ -75,6 +75,7 @@ export default function Navbar() {
                         onFocus={onFocus}
                         onBlur={onBlur}
                         onSearch={onSearch}
+                        value={country}
                         filterOption={(input, option) =>
                             option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                         }
@@ -108,7 +109,6 @@ export default function Navbar() {
                         <Option value="Bolivia">Bolivia</Option >
                         <Option value="Bosnia and Herzegovina">Bosnia and Herzegovina</Option >
                         <Option value="Botswana">Botswana</Option >
-                        <Option value="Bouvet Island">Bouvet Island</Option >
                         <Option value="Brazil">Brazil</Option >
                         <Option value="British Indian Ocean Territory">British Indian Ocean Territory</Option >
                         <Option value="Brunei Darussalam">Brunei Darussalam</Option >
@@ -132,7 +132,6 @@ export default function Navbar() {
                         <Option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</Option >
                         <Option value="Cook Islands">Cook Islands</Option >
                         <Option value="Costa Rica">Costa Rica</Option >
-                        <Option value="Cote D'ivoire">Cote D'ivoire</Option >
                         <Option value="Croatia">Croatia</Option >
                         <Option value="Cuba">Cuba</Option >
                         <Option value="Cyprus">Cyprus</Option >
@@ -316,7 +315,6 @@ export default function Navbar() {
                         <Option value="Uzbekistan">Uzbekistan</Option >
                         <Option value="Vanuatu">Vanuatu</Option >
                         <Option value="Venezuela">Venezuela</Option >
-                        <Option value="Viet Nam">Viet Nam</Option >
                         <Option value="Virgin Islands, British">Virgin Islands, British</Option >
                         <Option value="Virgin Islands, U.S.">Virgin Islands, U.S.</Option >
                         <Option value="Wallis and Futuna">Wallis and Futuna</Option >
